@@ -72,7 +72,7 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Keymaps --
 keymap("n", "<leader><Tab>", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>f", ":Format<cr>", opts)
+keymap("n", "<leader>fm", ":lua vim.lsp.buf.formatting() <cr>", opts)
 keymap("n", "ss", ":noh<cr>", opts)
 
 --- Buffer -- 
