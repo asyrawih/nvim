@@ -11,6 +11,11 @@ require "user.gitsigns"
 require "user.nvim-tree"
 require "user.bufferline"
 
+
+-- AutoClose Tag --
+local filetypes = {
+  'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue'
+}
 require('nvim-ts-autotag').setup({
-  filetypes = { "html" , "xml"  , "php" , "tsx" , "jsx"},
+  filetypes = filetypes 
 })
