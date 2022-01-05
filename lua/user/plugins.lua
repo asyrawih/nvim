@@ -93,6 +93,7 @@ return packer.startup(function(use)
   use "nvim-treesitter/playground"
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use "lewis6991/gitsigns.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
   use {
       'kyazdani42/nvim-tree.lua',
       requires = {
