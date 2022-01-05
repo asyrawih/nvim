@@ -10,3 +10,7 @@ require "user.comment"
 require "user.gitsigns"
 require "user.nvim-tree"
 require "user.bufferline"
+
+require('nvim-ts-autotag').setup({
+  filetypes = { "html" , "xml"  , "php" , "tsx" , "jsx"},
+})

@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs"
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+  use "windwp/nvim-ts-autotag"
   use {
     'numToStr/Comment.nvim',
     config = function()
@@ -98,9 +99,6 @@ return packer.startup(function(use)
       },
       config = function() require'nvim-tree'.setup {} end
   }
-
-
-
   
   if PACKER_BOOTSTRAP then
     require("packer").sync()
