@@ -54,6 +54,7 @@ return packer.startup(function(use)
         require('Comment').setup()
     end
   }
+  use 'nvim-lualine/lualine.nvim'
 
   -- CMP --
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -65,7 +66,7 @@ return packer.startup(function(use)
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
-  use "lunarvim/darkplus.nvim"
+  use 'shaunsingh/nord.nvim'
 
     -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -77,7 +78,7 @@ return packer.startup(function(use)
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
-
+     
     -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
