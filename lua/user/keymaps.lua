@@ -82,3 +82,7 @@ keymap("n" , "<S-w>", ":Bdelete<cr>" , opts)
 keymap("n" , "<leader>vs" , ":vsplit<cr>" , opts)
 keymap("n" , "<leader>hs" , ":split<cr>" , opts)
 
+
+--Focus Mode -- 
+keymap("n" , "<leader>te" , ":TwilightEnable<cr>" , opts)
+keymap("n" , "<leader>td" , ":TwilightDisable<cr>" , opts)
