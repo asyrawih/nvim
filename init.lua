@@ -16,6 +16,7 @@ require "user.resize"
 require "user.twin"
 
 
+
 -- AutoClose Tag --
 local filetypes = {
   'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue'
