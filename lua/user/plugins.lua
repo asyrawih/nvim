@@ -48,6 +48,21 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "windwp/nvim-ts-autotag"
+  use "simeji/winresizer"
+  use "p00f/nvim-ts-rainbow"
+  use "nvim-treesitter/playground"
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use "lewis6991/gitsigns.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
+  use "folke/twilight.nvim"
+  use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      },
+      config = function() require'nvim-tree'.setup {} end
+  }
+
   use {
     'numToStr/Comment.nvim',
     config = function()
@@ -66,8 +81,10 @@ return packer.startup(function(use)
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
+  --
+  -- ColorSchema
   use 'shaunsingh/nord.nvim'
-
+  use 'tiagovla/tokyodark.nvim' 
     -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
@@ -89,18 +106,6 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
 
-  use "p00f/nvim-ts-rainbow"
-  use "nvim-treesitter/playground"
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
-  use "lewis6991/gitsigns.nvim"
-  use "lukas-reineke/indent-blankline.nvim"
-  use {
-      'kyazdani42/nvim-tree.lua',
-      requires = {
-        'kyazdani42/nvim-web-devicons', -- optional, for file icon
-      },
-      config = function() require'nvim-tree'.setup {} end
-  }
   
   if PACKER_BOOTSTRAP then
     require("packer").sync()

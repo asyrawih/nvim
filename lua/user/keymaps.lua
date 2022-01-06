@@ -78,4 +78,7 @@ keymap("n", "ss", ":noh<cr>", opts)
 --- Buffer -- 
 keymap("n" , "<S-w>", ":Bdelete<cr>" , opts)
 
+-- Window -- 
+keymap("n" , "<leader>vs" , ":vsplit<cr>" , opts)
+keymap("n" , "<leader>hs" , ":split<cr>" , opts)
 

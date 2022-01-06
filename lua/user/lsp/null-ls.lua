@@ -12,6 +12,7 @@ null_ls.setup({
 	debug = true,
 	sources = {
 		formatting.prettier,
+    formatting.gofmt,
 	},
    on_attach = function(client)
     if client.resolved_capabilities.document_formatting then

@@ -12,6 +12,8 @@ require "user.nvim-tree"
 require "user.bufferline"
 require "user.lualine"
 require "user.blankline"
+require "user.resize"
+require "user.twin"
 
 
 -- AutoClose Tag --
