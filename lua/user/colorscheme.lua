@@ -1,4 +1,4 @@
-local colorscheme = "nord"
+local colorscheme = "catppuccin"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
@@ -6,8 +6,6 @@ if not status_ok then
   return
 end
 
-vim.g.nord_uniform_diff_background = 1
-vim.g.nord_bold = 1
 
 vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_italic_functions = true

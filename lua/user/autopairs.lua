@@ -20,3 +20,4 @@ require('nvim-autopairs').setup({
         pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], '%s+', '')
     }
 })
+

@@ -63,6 +63,8 @@ return packer.startup(function(use)
       config = function() require'nvim-tree'.setup {} end
   }
 
+  use({ "catppuccin/nvim", as = "catppuccin" })
+
   use {
     'numToStr/Comment.nvim',
     config = function()
