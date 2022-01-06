@@ -13,6 +13,8 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
     formatting.gofmt,
+    formatting.phpcsfixer.with({
+      extra_args = { "--rules=@PSR12,@PhpCsFixer"} })
 	},
    on_attach = function(client)
     if client.resolved_capabilities.document_formatting then
