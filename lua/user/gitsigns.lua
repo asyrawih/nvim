@@ -29,7 +29,7 @@ gitsigns.setup {
     ['v <leader>hr'] = ':Gitsigns reset_hunk<CR>',
     ['n <leader>hR'] = '<cmd>Gitsigns reset_buffer<CR>',
     ['n <leader>hp'] = '<cmd>Gitsigns preview_hunk<CR>',
-    ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line{full=true}<CR>',
+    ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line{full=false}<CR>',
     ['n <leader>hS'] = '<cmd>Gitsigns stage_buffer<CR>',
     ['n <leader>hU'] = '<cmd>Gitsigns reset_buffer_index<CR>',
 

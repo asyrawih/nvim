@@ -83,9 +83,9 @@ return packer.startup(function(use)
   -- Put this at the end after all plugins
   --
   -- ColorSchema
-  use 'shaunsingh/nord.nvim'
   use 'tiagovla/tokyodark.nvim' 
   use 'folke/tokyonight.nvim'
+  use 'arcticicestudio/nord-vim'
     -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
