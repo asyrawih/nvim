@@ -55,22 +55,10 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "folke/twilight.nvim"
-  use {
-      'kyazdani42/nvim-tree.lua',
-      requires = {
-        'kyazdani42/nvim-web-devicons', -- optional, for file icon
-      },
-      config = function() require'nvim-tree'.setup {} end
-  }
-
+  use "akinsho/toggleterm.nvim"
+  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, config = function() require'nvim-tree'.setup {} end }
   use({ "catppuccin/nvim", as = "catppuccin" })
-
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-  }
+  use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
   use 'nvim-lualine/lualine.nvim'
 
   -- CMP --
@@ -104,11 +92,7 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope-media-files.nvim'
 
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
-
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
   
   if PACKER_BOOTSTRAP then
     require("packer").sync()

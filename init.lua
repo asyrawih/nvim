@@ -14,6 +14,7 @@ require "user.lualine"
 require "user.blankline"
 require "user.resize"
 require "user.twin"
+require "user.toggleterm"
 
 
 
