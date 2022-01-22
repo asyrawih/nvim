@@ -89,3 +89,8 @@ keymap("n" , "<leader>sh",  ":split<cr>" , opts)
 --Focus Mode -- 
 keymap("n" , "<leader>te" , ":TwilightEnable<cr>" , opts)
 keymap("n" , "<leader>td" , ":TwilightDisable<cr>" , opts)
+
+--Comment--
+--:CommentToggle<cr>
+keymap('v' , "<leader>/" , ":CommentToggle<cr>" , opts)
+

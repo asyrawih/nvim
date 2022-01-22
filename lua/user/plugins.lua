@@ -60,7 +60,11 @@ return packer.startup(function(use)
   use({ "catppuccin/nvim", as = "catppuccin" })
   use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
   use 'nvim-lualine/lualine.nvim'
-
+  use {
+    "terrortylor/nvim-comment",
+    cmd = "CommentToggle",
+    config = "require('nvim_comment').setup()",
+  } 
   -- CMP --
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -68,6 +72,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -85,8 +90,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-
-     
+  use { 'tami5/lspsaga.nvim' } 
     -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'

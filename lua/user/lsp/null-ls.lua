@@ -11,14 +11,11 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = true,
 	sources = {
-		formatting.prettier,
     formatting.gofmt,
-    formatting.phpcsfixer.with({
-      extra_args = { "--rules=@PSR12,@PhpCsFixer"} })
-	},
-   on_attach = function(client)
+    on_attach = function(client)
     if client.resolved_capabilities.document_formatting then
       vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
     end
   end
+}
 })
