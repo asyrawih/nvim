@@ -56,15 +56,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "folke/twilight.nvim"
   use "akinsho/toggleterm.nvim"
-  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, config = function() require 'nvim-tree'.setup {} end }
-  use({ "catppuccin/nvim", as = "catppuccin" })
-  use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
   use 'nvim-lualine/lualine.nvim'
-  use {
-    "terrortylor/nvim-comment",
-    cmd = "CommentToggle",
-    config = "require('nvim_comment').setup()",
-  }
   -- CMP --
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -76,9 +68,13 @@ return packer.startup(function(use)
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
+  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, config = function() require 'nvim-tree'.setup {} end }
   --
   -- ColorSchema
   use 'arcticicestudio/nord-vim'
+  use 'marko-cerovac/material.nvim'
+
+  use({ "catppuccin/nvim", as = "catppuccin" })
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
