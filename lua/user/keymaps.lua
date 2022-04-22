@@ -37,9 +37,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
-
-
-
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
@@ -66,31 +63,27 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts) 
+keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
 -- Telescope --
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false , winbland = 10 }))<cr>", opts)
-keymap("n", "<leader>tt", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_ivy({ winbland = 10 }))<cr>", opts)
+-- keymap("n", "<leader>tt", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>tt", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy())<cr>", opts)
 
 -- Keymaps --
 keymap("n", "<leader><Tab>", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>fm", ":lua vim.lsp.buf.formatting() <cr>", opts)
 keymap("n", "ss", ":noh<cr>", opts)
 
---- Buffer -- 
-keymap("n" , "<S-w>", ":Bdelete<cr>" , opts)
+--- Buffer --
+keymap("n", "<S-w>", ":Bdelete<cr>", opts)
 
--- Window -- 
-keymap("n" , "<leader>vs" , ":vsplit<cr>" , opts)
-keymap("n" , "<leader>sh",  ":split<cr>" , opts)
+-- Window --
+keymap("n", "<leader>vs", ":vsplit<cr>", opts)
+keymap("n", "<leader>sh", ":split<cr>", opts)
 
 
---Focus Mode -- 
-keymap("n" , "<leader>te" , ":TwilightEnable<cr>" , opts)
-keymap("n" , "<leader>td" , ":TwilightDisable<cr>" , opts)
-
---Comment--
---:CommentToggle<cr>
-keymap('v' , "<leader>/" , ":CommentToggle<cr>" , opts)
-
+--Focus Mode --
+keymap("n", "<leader>te", ":TwilightEnable<cr>", opts)
+keymap("n", "<leader>td", ":TwilightDisable<cr>", opts)

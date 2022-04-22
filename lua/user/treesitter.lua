@@ -1,17 +1,17 @@
 local configs = require("nvim-treesitter.configs")
-local filetypes = {'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue'}
+local filetypes = { 'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue' }
 
 configs.setup {
-  autotag= {
-    enable = true ,  
+  autotag = {
+    enable = true,
     filetypes = filetypes
   },
-  ensure_installed = "maintained",
-  sync_install = false, 
-  ignore_install = { "" }, -- List of parsers to ignore installing
+  ensure_installed = "all",
+  sync_install = false,
+  ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
   autopairs = {
-		enable = true,
-	},
+    enable = true,
+  },
   highlight = {
     enable = true, -- false will disable the whole extension
     disable = { "" }, -- list of language that will be disabled

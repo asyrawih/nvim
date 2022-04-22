@@ -29,7 +29,7 @@ telescope.setup {
 
         ["<CR>"] = actions.select_default,
         ["<C-x>"] = actions.select_horizontal,
-       ["<C-v>"] = actions.select_vertical,
+        ["<C-v>"] = actions.select_vertical,
         ["<C-t>"] = actions.select_tab,
 
         ["<C-u>"] = actions.preview_scrolling_up,
@@ -90,15 +90,15 @@ telescope.setup {
   },
   extensions = {
     media_files = {
-        -- filetypes whitelist
-        -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-        filetypes = {"png", "webp", "jpg", "jpeg"},
-        find_cmd = "rg" -- find command (defaults to `fd`)
-      }
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = { "png", "webp", "jpg", "jpeg" },
+      find_cmd = "rg" -- find command (defaults to `fd`)
+    }
     -- Your extension configuration goes here:
     -- extension_name = {
     --   extension_config_key = value,
     -- }
     -- please take a look at the readme of the extension you want to configure
   },
-} 
+}
