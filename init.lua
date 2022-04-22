@@ -17,6 +17,7 @@ require "user.twin"
 require "user.toggleterm"
 require "user.neovide"
 require "user.saga"
+require "user.commandline"
 
 
 

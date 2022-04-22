@@ -56,7 +56,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "folke/twilight.nvim"
   use "akinsho/toggleterm.nvim"
-  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, config = function() require'nvim-tree'.setup {} end }
+  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, config = function() require 'nvim-tree'.setup {} end }
   use({ "catppuccin/nvim", as = "catppuccin" })
   use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
   use 'nvim-lualine/lualine.nvim'
@@ -64,7 +64,7 @@ return packer.startup(function(use)
     "terrortylor/nvim-comment",
     cmd = "CommentToggle",
     config = "require('nvim_comment').setup()",
-  } 
+  }
   -- CMP --
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -78,26 +78,24 @@ return packer.startup(function(use)
   -- Put this at the end after all plugins
   --
   -- ColorSchema
-  use 'tiagovla/tokyodark.nvim' 
-  use 'folke/tokyonight.nvim'
   use 'arcticicestudio/nord-vim'
-    -- snippets
+  -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
- -- LSP
+  -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use { 'tami5/lspsaga.nvim' } 
-    -- Telescope
+  use { 'tami5/lspsaga.nvim' }
+  -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
-  
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
