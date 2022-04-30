@@ -111,7 +111,7 @@ cmp.setup {
     end,
   },
   sources = {
-    { name = "copilot", group_index = 2 },
+    { name = "copilot" },
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
     { name = "luasnip" },

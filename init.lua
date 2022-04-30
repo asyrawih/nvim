@@ -20,13 +20,10 @@ require "user.saga"
 require "user.commandline"
 require "user.diff"
 require "user.flutter"
-
-
-
 -- AutoClose Tag --
 local filetypes = {
   'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue'
 }
 require('nvim-ts-autotag').setup({
-  filetypes = filetypes 
+  filetypes = filetypes
 })
