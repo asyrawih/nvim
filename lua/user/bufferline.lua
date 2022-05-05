@@ -13,7 +13,7 @@ bufferline.setup {
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
-    indicator_icon = "🎸",
+    indicator_icon = "|",
 
     buffer_close_icon = '',
 
@@ -37,9 +37,15 @@ bufferline.setup {
     tab_size = 21,
     diagnostics = false, -- | "nvim_lsp" | "coc",
     diagnostics_update_in_insert = false,
-    -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
-    --   return "("..count..")"
-    -- end,
+    diagnostics_indicator = function(count, level, diagnostics_dict, context)
+      local s = " "
+      for e, n in pairs(diagnostics_dict) do
+        local sym = e == "error" and " "
+            or (e == "warning" and " " or "")
+        s = s .. n .. sym
+      end
+      return s
+    end,
     -- NOTE: this will be called a lot so don't do any heavy processing here
     -- custom_filter = function(buf_number)
     --   -- filter out filetypes you don't want to see
@@ -56,7 +62,7 @@ bufferline.setup {
     --     return true
     --   end
     -- end,
-    offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+    offsets = { { filetype = "NvimTree", text = "", padding = 2 } },
     show_buffer_icons = true,
     show_buffer_close_icons = true,
     show_close_icon = true,
@@ -64,7 +70,7 @@ bufferline.setup {
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
-    separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
+    separator_style = "themable", -- | "thick" | "thin" | { 'any', 'any' },
     enforce_regular_tabs = true,
     always_show_bufferline = true,
     -- sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
@@ -165,4 +171,31 @@ bufferline.setup {
       guibg = { attribute = "bg", highlight = "Normal" },
     },
   },
+  custom_areas = {
+    right = function()
+      local result = {}
+      local seve = vim.diagnostic.severity
+      local error = #vim.diagnostic.get(0, { severity = seve.ERROR })
+      local warning = #vim.diagnostic.get(0, { severity = seve.WARN })
+      local info = #vim.diagnostic.get(0, { severity = seve.INFO })
+      local hint = #vim.diagnostic.get(0, { severity = seve.HINT })
+
+      if error ~= 0 then
+        table.insert(result, { text = "  " .. error, guifg = "#EC5241" })
+      end
+
+      if warning ~= 0 then
+        table.insert(result, { text = "  " .. warning, guifg = "#EFB839" })
+      end
+
+      if hint ~= 0 then
+        table.insert(result, { text = "  " .. hint, guifg = "#A3BA5E" })
+      end
+
+      if info ~= 0 then
+        table.insert(result, { text = "  " .. info, guifg = "#7EA9A7" })
+      end
+      return result
+    end,
+  }
 }

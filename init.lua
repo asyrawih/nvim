@@ -18,7 +18,8 @@ require "user.toggleterm"
 require "user.neovide"
 require "user.saga"
 require "user.diff"
-require "user.flutter"
+
+-- require "user.flutter"
 -- AutoClose Tag --
 local filetypes = {
   'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue'

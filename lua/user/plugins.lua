@@ -32,8 +32,7 @@ end
 -- Have packer use a popup window
 packer.init {
   display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+    open_fn = function() return require("packer.util").float { border = "rounded" }
     end,
   },
 }
@@ -58,6 +57,7 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use 'nvim-lualine/lualine.nvim'
   use { 'VonHeikemen/fine-cmdline.nvim', requires = { { 'MunifTanjim/nui.nvim' } } }
+  -- use 'feline-nvim/feline.nvim'
   -- CMP --
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -93,7 +93,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
   -- Flutter Pluggins
-  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
+  -- use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   use { "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
