@@ -14,14 +14,11 @@ null_ls.setup({
   debug = true,
   sources = {
     formatting.gofmt,
-    formatting.goimports,
-    formatting.golines,
-    code_actions.gitsigns,
     code_actions.refactoring,
     diagnostics.fish,
     formatting.prettier.with({
       command = "/opt/homebrew/bin/prettier",
-      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "smarty" },
       disabled_filetypes = { "lua" },
     }),
     on_attach = function(client)

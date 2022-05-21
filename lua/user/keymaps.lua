@@ -2,6 +2,7 @@ local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
 
+
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -72,8 +73,8 @@ keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(requir
 keymap("n", "<leader>tt", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy({ }))<cr>", opts)
 
 keymap("n", "<leader>mm", "<cmd>lua require('material.functions').toggle_style()<CR>", opts)
-keymap("n" , "<leader>df", ":DiffviewOpen<cr>" , opts)
-keymap("n" , "<leader>dc", ":DiffviewClose<cr>" , opts)
+keymap("n", "<leader>df", ":DiffviewOpen<cr>", opts)
+keymap("n", "<leader>dc", ":DiffviewClose<cr>", opts)
 -- Keymaps --
 keymap("n", "<leader><Tab>", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>fm", ":lua vim.lsp.buf.formatting() <cr>", opts)

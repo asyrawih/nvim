@@ -75,7 +75,6 @@ return packer.startup(function(use)
   use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, config = function() require 'nvim-tree'.setup {} end }
   --
   -- ColorSchema
-  use 'arcticicestudio/nord-vim'
   use 'marko-cerovac/material.nvim'
 
   use({ "catppuccin/nvim", as = "catppuccin" })
@@ -92,18 +91,19 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
+
   -- Flutter Pluggins
   -- use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
-
-  use { "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require("copilot").setup()
-      end, 100)
-    end
-  }
+  use { "github/copilot.vim" }
   use { "zbirenbaum/copilot-cmp", after = { "copilot.lua", "nvim-cmp" } }
+
+  use {
+    "zbirenbaum/copilot.lua",
+    event = "InsertEnter",
+    config = function()
+      vim.schedule(function() require("copilot").setup() end)
+    end,
+  }
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
