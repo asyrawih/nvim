@@ -15,15 +15,13 @@ M.setup = function()
 
   local config = {
     -- disable virtual text
-    virtual_text = true,
+    virtual_text = false,
     -- show signs
     signs = {
       active = signs,
     },
     update_in_insert = true,
-    underline = true,
-    severity_sort = true,
-    float = {
+    underline = true, severity_sort = true, float = {
       focusable = false,
       style = "minimal",
       border = "rounded",
@@ -42,6 +40,7 @@ M.setup = function()
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
     border = "rounded",
   })
+
 end
 
 local function lsp_highlight_document(client)
@@ -88,6 +87,7 @@ M.on_attach = function(client, bufnr)
 
   if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false
+    print(client)
   end
 
   lsp_keymaps(bufnr)

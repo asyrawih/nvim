@@ -25,5 +25,16 @@ lsp_installer.on_server_ready(function(server)
     }, opts)
   end
 
+  if server.name == "tsserver" then
+    opts = vim.tbl_deep_extend("force", {
+      init_options = {
+        -- disableSuggestions for tsserver
+        preferences = {
+          disableSuggestions = true,
+        },
+      }
+    }, opts)
+  end
+
   server:setup(opts)
 end)
