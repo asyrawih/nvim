@@ -72,6 +72,8 @@ keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(requir
 -- keymap("n", "<leader>tt", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>tt", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy({ }))<cr>", opts)
 
+keymap("n", "<leader>bb", "<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_ivy({ }))<cr>", opts)
+
 keymap("n", "<leader>mm", "<cmd>lua require('material.functions').toggle_style()<CR>", opts)
 keymap("n", "<leader>df", ":DiffviewOpen<cr>", opts)
 keymap("n", "<leader>dc", ":DiffviewClose<cr>", opts)

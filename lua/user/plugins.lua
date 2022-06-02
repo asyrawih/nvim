@@ -92,6 +92,8 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
+  use "terryma/vim-multiple-cursors"
+    
   -- Flutter Pluggins
   -- use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { "github/copilot.vim" }
@@ -107,6 +109,7 @@ return packer.startup(function(use)
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
+  use 'nkrkv/nvim-treesitter-rescript'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

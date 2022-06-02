@@ -21,8 +21,8 @@ require "user.copilot_setup"
 -- require "user.flutter"
 -- AutoClose Tag --
 local filetypes = {
-  'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'smarty'
+    'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'smarty', 'rescript'
 }
 require('nvim-ts-autotag').setup({
-  filetypes = filetypes
+    filetypes = filetypes
 })

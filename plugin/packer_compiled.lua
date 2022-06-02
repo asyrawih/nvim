@@ -219,6 +219,11 @@ _G.packer_plugins = {
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-rescript"] = {
+    loaded = true,
+    path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/nvim-treesitter-rescript",
+    url = "https://github.com/nkrkv/nvim-treesitter-rescript"
+  },
   ["nvim-ts-autotag"] = {
     loaded = true,
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
@@ -288,6 +293,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-multiple-cursors"] = {
+    loaded = true,
+    path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/vim-multiple-cursors",
+    url = "https://github.com/terryma/vim-multiple-cursors"
   },
   winresizer = {
     loaded = true,
