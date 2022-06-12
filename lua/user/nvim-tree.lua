@@ -1,6 +1,4 @@
 vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
   git = {
     unstaged = "",
     staged = "S",
@@ -17,17 +15,19 @@ vim.g.nvim_tree_icons = {
     empty_open = "",
     symlink = "",
   },
+  default = "",
+  symlink = "",
 }
 
-require'nvim-tree'.setup {
-  disable_netrw       = true,
-  hijack_netrw        = true,
+require 'nvim-tree'.setup {
+  disable_netrw       = false,
+  hijack_netrw        = false,
+  hijack_cursor       = false,
   open_on_setup       = false,
   ignore_ft_on_setup  = {},
   open_on_tab         = false,
-  hijack_cursor       = false,
-  update_cwd          = false,
-  diagnostics = {
+  update_cwd          = true,
+  diagnostics         = {
     enable = true,
     icons = {
       hint = "",
@@ -36,25 +36,16 @@ require'nvim-tree'.setup {
       error = "",
     }
   },
-  update_focused_file = {
-    enable      = false,
-    update_cwd  = false,
-    ignore_list = {}
-  },
-  system_open = {
-    cmd  = nil,
-    args = {}
-  },
-  filters = {
+  filters             = {
     dotfiles = false,
     custom = {}
   },
-  git = {
+  git                 = {
     enable = true,
     ignore = true,
     timeout = 500,
   },
-  view = {
+  view                = {
     width = 30,
     height = 30,
     hide_root_folder = false,
@@ -67,8 +58,17 @@ require'nvim-tree'.setup {
     relativenumber = false,
     signcolumn = "yes"
   },
-  trash = {
+  trash               = {
     cmd = "trash",
     require_confirm = true
+  },
+  update_focused_file = {
+    enable = true,
+    update_cwd = false,
+    ignore_list = { '.git', 'node_modules', '.cache' }
+  },
+
+  renderer = {
   }
+
 }

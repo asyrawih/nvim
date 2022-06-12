@@ -15,14 +15,7 @@ require "user.blankline"
 require "user.resize"
 require "user.toggleterm"
 require "user.saga"
-require "user.diff"
+-- require "user.diff"
+--require "user.rust_inlay"
 require "user.copilot_setup"
-
--- require "user.flutter"
--- AutoClose Tag --
-local filetypes = {
-    'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'smarty', 'rescript'
-}
-require('nvim-ts-autotag').setup({
-    filetypes = filetypes
-})
+require "user.norg"
