@@ -56,7 +56,6 @@ return packer.startup(function(use)
   use "folke/twilight.nvim"
   use "akinsho/toggleterm.nvim"
   use 'nvim-lualine/lualine.nvim'
-  use { 'VonHeikemen/fine-cmdline.nvim', requires = { { 'MunifTanjim/nui.nvim' } } }
   -- use 'feline-nvim/feline.nvim'
   -- CMP --
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -72,7 +71,7 @@ return packer.startup(function(use)
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
-  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', } , tag='nightly' }
+  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, tag = 'nightly' }
   --
   -- ColorSchema
   use 'marko-cerovac/material.nvim'
