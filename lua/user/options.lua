@@ -35,6 +35,7 @@ vim.opt.wrap = false                            -- display lines as one long lin
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.guifont= "FiraCode NF:h11:b"
+vim.opt.foldmethod = "indent"                   -- fold by indentation
 
 vim.opt.expandtab = true
 vim.opt.shortmess:append "c"
