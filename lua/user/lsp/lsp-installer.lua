@@ -36,5 +36,17 @@ lsp_installer.on_server_ready(function(server)
     }, opts)
   end
 
+  if server.name == 'rust_analyzer' then
+    opts = vim.tbl_deep_extend("force", {
+      settings = {
+        rust = {
+          cargo = {
+            manifest_path = vim.fn.expand("$VIMRUNTIME/cargo/Cargo.toml"),
+          },
+        },
+      },
+    }, opts)
+  end
+
   server:setup(opts)
 end)
