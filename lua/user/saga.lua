@@ -1,13 +1,12 @@
-
 local status_ok = pcall(require, "lspsaga")
 if not status_ok then
-	return
+  return
 end
 
 local lspsaga = require 'lspsaga'
 
 lspsaga.setup { -- defaults ...
-  debug = false,
+  debug = true,
   use_saga_diagnostic_sign = true,
   -- diagnostic sign
   error_sign = "",
@@ -20,7 +19,7 @@ lspsaga.setup { -- defaults ...
   code_action_prompt = {
     enable = true,
     sign = true,
-    sign_priority = 40,
+    sign_priority = 20,
     virtual_text = true,
   },
   finder_definition_icon = "  ",
@@ -29,6 +28,6 @@ lspsaga.setup { -- defaults ...
   definition_preview_icon = "  ",
   border_style = "single",
   rename_prompt_prefix = "➤",
-  server_filetype_map = {},
+  server_filetype_map = { "php" },
   diagnostic_prefix_format = "%d. ",
 }
