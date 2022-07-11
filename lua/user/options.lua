@@ -34,7 +34,7 @@ vim.opt.wrap = true                             -- display lines as one long lin
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.guifont= "FiraCode NF:h11:b"
--- vim.opt.foldmethod = "indent"                   -- fold by indentation
+-- vim.opt.foldmethod = "syntax"                   -- fold by indentation
 
 vim.opt.expandtab = true
 vim.opt.shortmess:append "c"
@@ -44,7 +44,7 @@ vim.cmd [[set iskeyword+=-]]
 
 -- Check Buffer
 
-local group = vim.api.nvim_create_augroup("change_php_indet", {clear = true})
+local group = vim.api.nvim_create_augroup("change_php_indent", {clear = true})
 
 
 vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
@@ -54,3 +54,6 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
     end,
   group=group
 })
+
+-- Run gofmt + goimport on save
+vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)

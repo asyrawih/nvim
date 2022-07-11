@@ -1,5 +1,4 @@
 local fn = vim.fn
-
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -56,6 +55,7 @@ return packer.startup(function(use)
   use "folke/twilight.nvim"
   use "akinsho/toggleterm.nvim"
   use 'nvim-lualine/lualine.nvim'
+  use 'ray-x/go.nvim'
   -- use 'feline-nvim/feline.nvim'
   -- CMP --
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -92,24 +92,17 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope-media-files.nvim'
 
   use "terryma/vim-multiple-cursors"
+  use "ray-x/guihua.lua"
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'nvim-telescope/telescope-dap.nvim'
+  use 'ray-x/guihua.lua'
 
-  -- Flutter Pluggins
-  -- use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
-  use { "github/copilot.vim" }
-  use { "zbirenbaum/copilot-cmp", after = { "copilot.lua", "nvim-cmp" } }
-
-  use {
-    "zbirenbaum/copilot.lua",
-    event = "InsertEnter",
-    config = function()
-      vim.schedule(function() require("copilot").setup() end)
-    end,
-  }
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
   use 'nkrkv/nvim-treesitter-rescript'
-
   use { "nvim-neorg/neorg", requires = "nvim-lua/plenary.nvim" }
   use {
     "folke/zen-mode.nvim",
