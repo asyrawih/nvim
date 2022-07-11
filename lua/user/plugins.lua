@@ -92,7 +92,6 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope-media-files.nvim'
 
   use "terryma/vim-multiple-cursors"
-  use "ray-x/guihua.lua"
   use 'mfussenegger/nvim-dap'
   use 'rcarriga/nvim-dap-ui'
   use 'theHamsta/nvim-dap-virtual-text'

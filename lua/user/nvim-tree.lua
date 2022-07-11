@@ -1,23 +1,3 @@
-vim.g.nvim_tree_icons = {
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-  default = "",
-  symlink = "",
-}
 
 require 'nvim-tree'.setup {
   disable_netrw       = false,
@@ -69,6 +49,28 @@ require 'nvim-tree'.setup {
   },
 
   renderer = {
+    icons = {
+      glyphs = {
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          deleted = "",
+          untracked = "U",
+          ignored = "◌",
+        },
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+        },
+        default = "",
+        symlink = "",
+      }
+    }
   }
 
 }
