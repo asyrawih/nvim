@@ -33,7 +33,6 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.wrap = true                             -- display lines as one long line
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
-vim.opt.guifont= "FiraCode NF:h11:b"
 -- vim.opt.foldmethod = "syntax"                   -- fold by indentation
 
 vim.opt.expandtab = true

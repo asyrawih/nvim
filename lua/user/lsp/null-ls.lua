@@ -14,10 +14,9 @@ null_ls.setup({
   debug = true,
   sources = {
     formatting.gofmt,
-    code_actions.refactoring,
     diagnostics.fish,
     formatting.prettier.with({
-      command = "/opt/homebrew/bin/prettier",
+      command = "/usr/local/bin/prettier",
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "smarty" },
       disabled_filetypes = { "lua" },
     }),

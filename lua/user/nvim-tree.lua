@@ -53,7 +53,7 @@ require 'nvim-tree'.setup {
       glyphs = {
         git = {
           unstaged = "",
-          staged = "S",
+          staged = "",
           unmerged = "",
           renamed = "➜",
           deleted = "",

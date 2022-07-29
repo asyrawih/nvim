@@ -36,14 +36,14 @@ catppuccin.setup({
     nvimtree = {
       enabled = true,
       show_root = false,
-      transparent_panel = false,
+      transparent_panel = true,
     },
     indent_blankline = {
       enabled = true,
       colored_indent_levels = true,
     },
-    neogit = false,
-    vim_sneak = false,
+    neogit = true,
+    vim_sneak = true,
     bufferline = true,
     markdown = true,
     ts_rainbow = true,

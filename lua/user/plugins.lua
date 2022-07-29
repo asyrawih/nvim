@@ -71,7 +71,7 @@ return packer.startup(function(use)
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
-  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', }, tag = 'nightly' }
+  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', } }
   --
   -- ColorSchema
   use 'marko-cerovac/material.nvim'
@@ -91,24 +91,21 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
-  use "terryma/vim-multiple-cursors"
   use 'mfussenegger/nvim-dap'
   use 'rcarriga/nvim-dap-ui'
   use 'theHamsta/nvim-dap-virtual-text'
   use 'nvim-telescope/telescope-dap.nvim'
   use 'ray-x/guihua.lua'
+  use "jbyuki/venn.nvim"
 
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
   use 'nkrkv/nvim-treesitter-rescript'
   use { "nvim-neorg/neorg", requires = "nvim-lua/plenary.nvim" }
-  use {
-    "folke/zen-mode.nvim",
-    config = function()
-      require("zen-mode").setup {}
-    end
-  }
+  -- install without yarn or npm
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
