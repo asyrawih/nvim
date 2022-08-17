@@ -33,7 +33,7 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.wrap = true                             -- display lines as one long line
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
--- vim.opt.foldmethod = "syntax"                   -- fold by indentation
+vim.opt.foldmethod = "marker"                   -- fold by indentation
 
 vim.opt.expandtab = true
 vim.opt.shortmess:append "c"
@@ -54,5 +54,10 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
   group=group
 })
 
--- Run gofmt + goimport on save
-vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
+vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
+   pattern = '*.go',
+   callback = function()
+      vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
+    end,
+  group=group
+})

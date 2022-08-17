@@ -75,7 +75,6 @@ keymap("n", "<leader>tt", "<cmd>lua require'telescope.builtin'.live_grep(require
 keymap("n", "<leader>bb", "<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_ivy({ }))<cr>", opts)
 
 keymap("n", "<leader>mm", "<cmd>lua require('material.functions').toggle_style()<CR>", opts)
-keymap("n", "<leader>L", "<cmd>lua require'lsp_extensions'.inlay_hints{ highlight = 'Comment' ,prefix = '>' }<CR>", opts)
 
 
 keymap("n", "<leader>df", ":DiffviewOpen<cr>", opts)
@@ -92,7 +91,3 @@ keymap("n", "<S-w>", ":Bdelete<cr>", opts)
 keymap("n", "<leader>vs", ":vsplit<cr>", opts)
 keymap("n", "<leader>sh", ":split<cr>", opts)
 
-
---Focus Mode --
-keymap("n", "<leader>te", ":TwilightEnable<cr>", opts)
-keymap("n", "<leader>td", ":TwilightDisable<cr>", opts)

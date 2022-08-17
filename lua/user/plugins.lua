@@ -53,10 +53,12 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "folke/twilight.nvim"
-  use "akinsho/toggleterm.nvim"
   use 'nvim-lualine/lualine.nvim'
+
+  --- Golang ---
   use 'ray-x/go.nvim'
-  -- use 'feline-nvim/feline.nvim'
+  use 'ray-x/guihua.lua'
+
   -- CMP --
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -75,8 +77,8 @@ return packer.startup(function(use)
   --
   -- ColorSchema
   use 'marko-cerovac/material.nvim'
-
   use({ "catppuccin/nvim", as = "catppuccin" })
+
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
@@ -95,7 +97,6 @@ return packer.startup(function(use)
   use 'rcarriga/nvim-dap-ui'
   use 'theHamsta/nvim-dap-virtual-text'
   use 'nvim-telescope/telescope-dap.nvim'
-  use 'ray-x/guihua.lua'
   use "jbyuki/venn.nvim"
 
 
