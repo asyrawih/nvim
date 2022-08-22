@@ -77,6 +77,7 @@ keymap("n", "<leader>bb", "<cmd>lua require'telescope.builtin'.buffers(require('
 keymap("n", "<leader>mm", "<cmd>lua require('material.functions').toggle_style()<CR>", opts)
 
 
+
 keymap("n", "<leader>df", ":DiffviewOpen<cr>", opts)
 keymap("n", "<leader>dc", ":DiffviewClose<cr>", opts)
 -- Keymaps --
