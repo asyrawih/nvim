@@ -78,6 +78,7 @@ return packer.startup(function(use)
   -- ColorSchema
   use 'marko-cerovac/material.nvim'
   use({ "catppuccin/nvim", as = "catppuccin" })
+  use({ 'glepnir/zephyr-nvim'})
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

@@ -305,6 +305,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/indodax/.local/share/nvim/site/pack/packer/start/winresizer",
     url = "https://github.com/simeji/winresizer"
+  },
+  ["zephyr-nvim"] = {
+    loaded = true,
+    path = "/Users/indodax/.local/share/nvim/site/pack/packer/start/zephyr-nvim",
+    url = "https://github.com/glepnir/zephyr-nvim"
   }
 }
 
