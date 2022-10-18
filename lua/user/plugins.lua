@@ -79,7 +79,7 @@ return packer.startup(function(use)
   -- ColorSchema
   use 'marko-cerovac/material.nvim'
   use({ "catppuccin/nvim" })
-  use({ 'glepnir/zephyr-nvim'})
+  use({ 'glepnir/zephyr-nvim' })
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -87,7 +87,7 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use({ "glepnir/lspsaga.nvim", branch = "main", })
@@ -107,7 +107,16 @@ return packer.startup(function(use)
   use 'nkrkv/nvim-treesitter-rescript'
   use { "nvim-neorg/neorg", requires = "nvim-lua/plenary.nvim" }
   -- install without yarn or npm
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+
+  use {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+      'WhoIsSethDaniel/mason-tool-installer.nvim'
+  }
 
 
   if PACKER_BOOTSTRAP then
