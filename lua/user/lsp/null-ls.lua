@@ -14,6 +14,8 @@ null_ls.setup({
   debug = true,
   sources = {
     formatting.phpcsfixer,
+    formatting.yamlfmt,
+    formatting.buf,
     diagnostics.fish,
     formatting.prettier.with({
       command = "/usr/local/bin/prettier",
