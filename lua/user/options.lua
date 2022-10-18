@@ -50,6 +50,20 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
    pattern = '*.php',
    callback = function()
       vim.api.nvim_command("setlocal shiftwidth=4")
+      vim.api.nvim_command("setlocal tabstop=4")
+      vim.api.nvim_command("setlocal cmdheight=4")
+      vim.api.nvim_command("setlocal numberwidth=4")
+    end,
+  group=group
+})
+
+vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
+   pattern = '*.go',
+   callback = function()
+      vim.api.nvim_command("setlocal shiftwidth=4")
+      vim.api.nvim_command("setlocal tabstop=4")
+      vim.api.nvim_command("setlocal cmdheight=4")
+      vim.api.nvim_command("setlocal numberwidth=4")
     end,
   group=group
 })

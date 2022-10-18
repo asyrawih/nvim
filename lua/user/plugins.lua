@@ -58,6 +58,7 @@ return packer.startup(function(use)
   --- Golang ---
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua'
+  use 'BYT0723/vim-goctl'
 
   -- CMP --
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -77,7 +78,7 @@ return packer.startup(function(use)
   --
   -- ColorSchema
   use 'marko-cerovac/material.nvim'
-  use({ "catppuccin/nvim", as = "catppuccin" })
+  use({ "catppuccin/nvim" })
   use({ 'glepnir/zephyr-nvim'})
 
   -- snippets
@@ -89,7 +90,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use({ 'glepnir/lspsaga.nvim' }) 
+  use({ "glepnir/lspsaga.nvim", branch = "main", })
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'

@@ -33,7 +33,6 @@ keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Downl", ":resize-2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
-
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
@@ -72,17 +71,12 @@ keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(requir
 -- keymap("n", "<leader>tt", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>tt", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy({ }))<cr>", opts)
 
-keymap("n", "<leader>bb", "<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_ivy({ }))<cr>", opts)
-
-keymap("n", "<leader>mm", "<cmd>lua require('material.functions').toggle_style()<CR>", opts)
-
-
 
 keymap("n", "<leader>df", ":DiffviewOpen<cr>", opts)
 keymap("n", "<leader>dc", ":DiffviewClose<cr>", opts)
 -- Keymaps --
 keymap("n", "<leader><Tab>", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>fm", ":lua vim.lsp.buf.formatting() <cr>", opts)
+keymap("n", "<leader>fm", ":lua vim.lsp.buf.format() <cr>", opts)
 keymap("n", "ss", ":noh<cr>", opts)
 
 --- Buffer --
