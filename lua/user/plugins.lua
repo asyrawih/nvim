@@ -112,11 +112,12 @@ return packer.startup(function(use)
 
 
   use {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
-      'WhoIsSethDaniel/mason-tool-installer.nvim'
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    'WhoIsSethDaniel/mason-tool-installer.nvim'
   }
+  use { "ellisonleao/carbon-now.nvim", config = function() require('carbon-now').setup() end }
 
 
   if PACKER_BOOTSTRAP then

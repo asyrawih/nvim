@@ -22,5 +22,5 @@ null_ls.setup({
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "smarty" },
       disabled_filetypes = { "lua" },
     }),
-  }
+  },
 })

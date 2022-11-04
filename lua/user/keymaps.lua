@@ -86,3 +86,5 @@ keymap("n", "<S-w>", ":Bdelete<cr>", opts)
 keymap("n", "<leader>vs", ":vsplit<cr>", opts)
 keymap("n", "<leader>sh", ":split<cr>", opts)
 
+-- Carbon Now --
+vim.keymap.set("v", "<leader>cn", ":CarbonNow<CR>", { noremap = true, silent = true})
