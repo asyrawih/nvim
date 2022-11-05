@@ -17,7 +17,7 @@ require 'nvim-tree'.setup {
     }
   },
   filters             = {
-    dotfiles = false,
+    dotfiles = true,
     custom = {}
   },
   git                 = {
@@ -26,7 +26,7 @@ require 'nvim-tree'.setup {
     timeout = 500,
   },
   view                = {
-    width = 30,
+    width = 40,
     hide_root_folder = false,
     side = 'left',
     mappings = {

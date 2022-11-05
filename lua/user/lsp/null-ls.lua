@@ -11,14 +11,12 @@ local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
-  debug = true,
   sources = {
-    formatting.phpcsfixer,
     formatting.yamlfmt,
     formatting.buf,
     diagnostics.fish,
     formatting.prettier.with({
-      command = "/usr/local/bin/prettier",
+      command = "/opt/homebrew/bin/prettier",
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "smarty" },
       disabled_filetypes = { "lua" },
     }),
