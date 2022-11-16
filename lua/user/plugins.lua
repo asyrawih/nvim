@@ -71,15 +71,12 @@ return packer.startup(function(use)
 
   use "tpope/vim-commentary"
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
   use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', } }
-  --
-  -- ColorSchema
-  use 'marko-cerovac/material.nvim'
   use({ "catppuccin/nvim" })
   use({ 'glepnir/zephyr-nvim' })
+
+  -- ColorSchema
+  use 'marko-cerovac/material.nvim'
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -117,6 +114,8 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
     'WhoIsSethDaniel/mason-tool-installer.nvim'
   }
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+
   use { "ellisonleao/carbon-now.nvim", config = function() require('carbon-now').setup() end }
 
 

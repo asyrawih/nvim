@@ -182,6 +182,11 @@ _G.packer_plugins = {
     path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
+  neogit = {
+    loaded = true,
+    path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/TimUntersberger/neogit"
+  },
   neorg = {
     loaded = true,
     path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/neorg",
