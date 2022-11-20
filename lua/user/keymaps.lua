@@ -67,9 +67,11 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
 -- Telescope --
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_ivy({ winbland = 10 }))<cr>", opts)
+keymap("n", "<leader>ff",
+  "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_ivy({ winbland = 10 }))<cr>", opts)
 -- keymap("n", "<leader>tt", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>tt", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy({ }))<cr>", opts)
+keymap("n", "<leader>tt", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy({ }))<cr>",
+  opts)
 
 
 keymap("n", "<leader>df", ":DiffviewOpen<cr>", opts)
@@ -82,9 +84,10 @@ keymap("n", "ss", ":noh<cr>", opts)
 --- Buffer --
 keymap("n", "<S-w>", ":Bdelete<cr>", opts)
 
+
 -- Window --
 keymap("n", "<leader>vs", ":vsplit<cr>", opts)
 keymap("n", "<leader>sh", ":split<cr>", opts)
 
 -- Carbon Now --
-vim.keymap.set("v", "<leader>cn", ":CarbonNow<CR>", { noremap = true, silent = true})
+vim.keymap.set("v", "<leader>cn", ":CarbonNow<CR>", { noremap = true, silent = true })
