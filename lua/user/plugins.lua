@@ -118,8 +118,6 @@ return packer.startup(function(use)
 
 
   use { "glepnir/galaxyline.nvim" }
-  use { "Avimitin/nerd-galaxyline" }
-  use {"Avimitin/neovim-deus"}
 
 
   if PACKER_BOOTSTRAP then

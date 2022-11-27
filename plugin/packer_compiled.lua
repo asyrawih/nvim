@@ -192,16 +192,6 @@ _G.packer_plugins = {
     path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/neogit",
     url = "https://github.com/TimUntersberger/neogit"
   },
-  ["neovim-deus"] = {
-    loaded = true,
-    path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/neovim-deus",
-    url = "https://github.com/Avimitin/neovim-deus"
-  },
-  ["nerd-galaxyline"] = {
-    loaded = true,
-    path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/nerd-galaxyline",
-    url = "https://github.com/Avimitin/nerd-galaxyline"
-  },
   ["nlsp-settings.nvim"] = {
     loaded = true,
     path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
