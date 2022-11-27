@@ -360,7 +360,7 @@ insert_left {
 
 insert_left{
   Separa = {
-    provider = function() return ' ' end,
+    provider = function() return '  ' end,
     highlight = {colors.line_bg, },
   }
 }
@@ -419,7 +419,7 @@ insert_blank_line_at_right()
 
 insert_right{
   Separa = {
-    provider = function() return ' ' end,
+    provider = function() return '  ' end,
     highlight = {colors.line_bg, },
   }
 }
@@ -455,7 +455,7 @@ require ('galaxyline').section.short_line_left = {
         local name = BufferTypeMap[vim.bo.filetype] or ' Editor'
         return string.format('  %s', name)
       end,
-      separator = ' ',
+      -- separator = ' ',
       separator_highlight = {colors.line_bg, colors.dark}
     }
   },
@@ -465,7 +465,7 @@ require ('galaxyline').section.short_line_left = {
       provider = function()
         return ' ' .. vim.api.nvim_win_get_number(vim.api.nvim_get_current_win())
       end,
-      separator = '',
+      -- separator = ' ',
       separator_highlight = {colors.dark, "#0c0e17"}
     }
   }
