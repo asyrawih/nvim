@@ -33,7 +33,7 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.wrap = true                             -- display lines as one long line
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
-vim.opt.foldmethod = "indent"                   -- fold by indentation
+-- vim.opt.foldmethod = "indent"                   -- fold by indentation
 
 vim.opt.expandtab = true
 vim.opt.shortmess:append "c"
@@ -43,7 +43,7 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 
 -- Delete Something Without Copy
-vim.keymap.set({'n', 'x'}, 'x', '"_x')
+-- vim.keymap.set({'n', 'x'}, 'x', '"_x')
 vim.keymap.set({'n', 'x'}, 'd', '"_d')
 
 -- Check Buffer

@@ -125,6 +125,11 @@ _G.packer_plugins = {
     path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["galaxyline.nvim"] = {
+    loaded = true,
+    path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
+    url = "https://github.com/glepnir/galaxyline.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -187,10 +192,15 @@ _G.packer_plugins = {
     path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/neogit",
     url = "https://github.com/TimUntersberger/neogit"
   },
-  neorg = {
+  ["neovim-deus"] = {
     loaded = true,
-    path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/neorg",
-    url = "https://github.com/nvim-neorg/neorg"
+    path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/neovim-deus",
+    url = "https://github.com/Avimitin/neovim-deus"
+  },
+  ["nerd-galaxyline"] = {
+    loaded = true,
+    path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/nerd-galaxyline",
+    url = "https://github.com/Avimitin/nerd-galaxyline"
   },
   ["nlsp-settings.nvim"] = {
     loaded = true,

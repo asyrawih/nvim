@@ -102,7 +102,6 @@ return packer.startup(function(use)
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
   use 'nkrkv/nvim-treesitter-rescript'
-  use { "nvim-neorg/neorg", requires = "nvim-lua/plenary.nvim" }
   -- install without yarn or npm
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
     setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
@@ -111,12 +110,16 @@ return packer.startup(function(use)
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
     'WhoIsSethDaniel/mason-tool-installer.nvim'
   }
   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
   use { "ellisonleao/carbon-now.nvim", config = function() require('carbon-now').setup() end }
+
+
+  use { "glepnir/galaxyline.nvim" }
+  use { "Avimitin/nerd-galaxyline" }
+  use {"Avimitin/neovim-deus"}
 
 
   if PACKER_BOOTSTRAP then
