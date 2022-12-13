@@ -43,7 +43,6 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs"
-  use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "windwp/nvim-ts-autotag"
   use "simeji/winresizer"
@@ -52,7 +51,6 @@ return packer.startup(function(use)
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use "lewis6991/gitsigns.nvim"
   use "lukas-reineke/indent-blankline.nvim"
-  use "folke/twilight.nvim"
   use 'nvim-lualine/lualine.nvim'
 
   --- Golang ---
@@ -67,16 +65,22 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'nvim-telescope/telescope-dap.nvim'
+  use "jbyuki/venn.nvim"
 
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use 'nvim-telescope/telescope-media-files.nvim'
 
   use "tpope/vim-commentary"
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', } }
   use({ "catppuccin/nvim" })
   use({ 'glepnir/zephyr-nvim' })
-
-  -- ColorSchema
-  use 'marko-cerovac/material.nvim'
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -88,37 +92,21 @@ return packer.startup(function(use)
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use({ "glepnir/lspsaga.nvim", branch = "main", })
-  -- Telescope
-  use "nvim-telescope/telescope.nvim"
-  use 'nvim-telescope/telescope-media-files.nvim'
-
-  use 'mfussenegger/nvim-dap'
-  use 'rcarriga/nvim-dap-ui'
-  use 'theHamsta/nvim-dap-virtual-text'
-  use 'nvim-telescope/telescope-dap.nvim'
-  use "jbyuki/venn.nvim"
 
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
   use 'nkrkv/nvim-treesitter-rescript'
-  -- install without yarn or npm
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-
 
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     'WhoIsSethDaniel/mason-tool-installer.nvim'
   }
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-
-  use { "ellisonleao/carbon-now.nvim", config = function() require('carbon-now').setup() end }
-
 
   use { "glepnir/galaxyline.nvim" }
 
+  use { 'akinsho/bufferline.nvim', tag = "v3.*" }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
