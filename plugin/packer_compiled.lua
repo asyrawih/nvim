@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/hanan.rivai/.local/share/nvim/site/pack/packer/start/friendly-snippets",

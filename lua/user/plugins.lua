@@ -107,6 +107,7 @@ return packer.startup(function(use)
   use { "glepnir/galaxyline.nvim" }
 
   use { 'akinsho/bufferline.nvim', tag = "v3.*" }
+  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
