@@ -6,5 +6,13 @@ nvim_dev_icons.set_icon {
     color = "#51a0cf",
     cterm_color = "74",
     name = "Dockerfile"
-  }
+  },
+
+  Makefile = {
+    icon = "",
+    color = "#abeb34",
+    cterm_color = "74",
+    name = "Makefile"
+  },
+
 }
