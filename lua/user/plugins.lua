@@ -109,6 +109,21 @@ return packer.startup(function(use)
   use { 'akinsho/bufferline.nvim', tag = "v3.*" }
   use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
 
+  use {
+    'edolphin-ydf/goimpl.nvim',
+    requires = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-lua/popup.nvim' },
+      { 'nvim-telescope/telescope.nvim' },
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
+    config = function()
+      require 'telescope'.load_extension 'goimpl'
+    end,
+  }
+
+
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

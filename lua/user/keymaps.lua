@@ -73,6 +73,9 @@ keymap("n", "<leader>ff",
 keymap("n", "<leader>tt", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy({ }))<cr>",
   opts)
 
+vim.api.nvim_set_keymap('n', '<leader>im', [[<cmd>lua require'telescope'.extensions.goimpl.goimpl{}<CR>]],
+  { noremap = true, silent = true })
+
 
 keymap("n", "<leader>df", ":DiffviewOpen<cr>", opts)
 keymap("n", "<leader>dc", ":DiffviewClose<cr>", opts)
@@ -88,6 +91,3 @@ keymap("n", "<S-w>", ":Bdelete<cr>", opts)
 -- Window --
 keymap("n", "<leader>vs", ":vsplit<cr>", opts)
 keymap("n", "<leader>sh", ":split<cr>", opts)
-
--- Carbon Now --
-vim.keymap.set("v", "<leader>cn", ":CarbonNow<CR>", { noremap = true, silent = true })
