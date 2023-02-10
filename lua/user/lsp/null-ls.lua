@@ -13,7 +13,7 @@ local code_actions = null_ls.builtins.code_actions
 null_ls.setup({
   sources = {
     formatting.yamlfmt,
-    formatting.buf,
+    formatting.jq,
     diagnostics.fish,
     formatting.prettier.with({
       command = "/opt/homebrew/bin/prettier",

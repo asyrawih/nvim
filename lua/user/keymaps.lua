@@ -68,13 +68,12 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope --
 keymap("n", "<leader>ff",
-  "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_ivy({ winbland = 10 }))<cr>", opts)
--- keymap("n", "<leader>tt", "<cmd>Telescope live_grep<cr>", opts)
+    "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_ivy({ winbland = 10 }))<cr>", opts)
 keymap("n", "<leader>tt", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy({ }))<cr>",
-  opts)
+    opts)
 
 vim.api.nvim_set_keymap('n', '<leader>im', [[<cmd>lua require'telescope'.extensions.goimpl.goimpl{}<CR>]],
-  { noremap = true, silent = true })
+    { noremap = true, silent = true })
 
 
 keymap("n", "<leader>df", ":DiffviewOpen<cr>", opts)
@@ -87,7 +86,12 @@ keymap("n", "ss", ":noh<cr>", opts)
 --- Buffer --
 keymap("n", "<S-w>", ":Bdelete<cr>", opts)
 
+--- Golang ---
+keymap("n", "<leader>gt", ":GoTestFunc -v -n 1 -F<cr>", opts)
 
 -- Window --
 keymap("n", "<leader>vs", ":vsplit<cr>", opts)
 keymap("n", "<leader>sh", ":split<cr>", opts)
+keymap("n", "<leader>o", ":GoPkgOutline<cr>", opts)
+
+-- vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })

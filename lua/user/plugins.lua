@@ -122,6 +122,10 @@ return packer.startup(function(use)
     end,
   }
 
+  use {"jidn/vim-dbml"}
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 
   if PACKER_BOOTSTRAP then

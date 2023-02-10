@@ -2,7 +2,7 @@ local keymap = vim.keymap.set
 local saga = require('lspsaga')
 
 
-saga.init_lsp_saga({
+saga.setup({
   show_outline = {
     win_position = 'right',
     --set special filetype win that outline window split.like NvimTree neotree
@@ -25,7 +25,7 @@ saga.init_lsp_saga({
     -- more information see `vim.fn.expand` or `expand`
     -- ## only valid after set `show_file = true`
     file_formatter = "",
-    click_support = false,
+    click_support = true,
   },
 })
 
