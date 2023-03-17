@@ -4,7 +4,6 @@ require('go').setup({
   gofmt = 'gofumpt',       -- gofmt cmd,
   lsp_gofumpt = true,      -- true: set default gofmt in gopls format to gofumpt
   lsp_keymaps = false,     -- set to false to disable gopls/lsp keymap
-  lsp_cfg = false,
   lsp_inlay_hints = {
     enable = true,
     -- Only show inlay hints for the current line
