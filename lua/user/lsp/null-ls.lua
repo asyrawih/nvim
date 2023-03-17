@@ -19,7 +19,7 @@ local sources = {
     filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "smarty" },
     disabled_filetypes = { "lua" },
   }),
-  diagnostics.revive,
+  -- diagnostics.revive,
   formatting.golines.with({
     extra_args = {
       "--max-len=180",
@@ -29,8 +29,5 @@ local sources = {
 }
 
 
--- for go.nvim
-local golangci_lint = require("go.null_ls").golangci_lint()
-table.insert(sources, golangci_lint)
 
-null_ls.setup({ sources = sources, debounce = 1000, default_timeout = 1000 })
+null_ls.setup({ sources = sources})

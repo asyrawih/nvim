@@ -321,16 +321,6 @@ _G.packer_plugins = {
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
-  ["vim-dbml"] = {
-    loaded = true,
-    path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/vim-dbml",
-    url = "https://github.com/jidn/vim-dbml"
-  },
-  ["vim-goctl"] = {
-    loaded = true,
-    path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/vim-goctl",
-    url = "https://github.com/BYT0723/vim-goctl"
-  },
   winresizer = {
     loaded = true,
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/winresizer",

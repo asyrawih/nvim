@@ -57,7 +57,6 @@ return packer.startup(function(use)
   --- Golang ---
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua'
-  use 'BYT0723/vim-goctl'
 
   -- CMP --
   use "hrsh7th/nvim-cmp"         -- The completion plugin
@@ -124,7 +123,6 @@ return packer.startup(function(use)
   }
   use { 'iamcco/markdown-preview.nvim' }
 
-  use { "jidn/vim-dbml" }
 
   --- Code With AI
   use {

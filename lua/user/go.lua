@@ -5,7 +5,7 @@ require('go').setup({
   lsp_gofumpt = true,      -- true: set default gofmt in gopls format to gofumpt
   lsp_keymaps = false,     -- set to false to disable gopls/lsp keymap
   lsp_inlay_hints = {
-    enable = true,
+    enable = false,
     -- Only show inlay hints for the current line
     only_current_line = false,
     -- Event which triggers a refersh of the inlay hints.
@@ -40,5 +40,7 @@ require('go').setup({
   lsp_diag_signs = true,
   lsp_diag_update_in_insert = false,
   lsp_document_formatting = true,
-  gopls_remote_auto = false
+  gopls_remote_auto = false,
+  test_runner = 'richgo',   -- one of {`go`, `richgo`, `dlv`, `ginkgo`, `gotestsum`}
+  verbose_tests = true, -- set to add verbose flag to tests deprecated, see '-v' option
 })
