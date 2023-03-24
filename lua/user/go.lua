@@ -22,7 +22,7 @@ require('go').setup({
     show_parameter_hints = true,
     -- prefix for all the other hints (type, chaining)
     other_hints_prefix = "=> ",
-    -- whether to align to the lenght of the longest line in the file
+    -- whether to align to the length of the longest line in the file
     max_len_align = false,
     -- padding from the left if max_len_align is true
     max_len_align_padding = 1,
@@ -44,7 +44,7 @@ require('go').setup({
   test_runner = 'richgo', -- one of {`go`, `richgo`, `dlv`, `ginkgo`, `gotestsum`}
   verbose_tests = true,   -- set to add verbose flag to tests deprecated, see '-v' option
   floaterm = {
-    posititon = 'right',   -- one of {`top`, `bottom`, `left`, `right`, `center`, `auto`}
+    posititon = 'right',  -- one of {`top`, `bottom`, `left`, `right`, `center`, `auto`}
     width = 0.45,         -- width of float window if not auto
     height = 0.98,        -- height of float window if not auto
   },

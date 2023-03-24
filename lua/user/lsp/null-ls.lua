@@ -10,24 +10,25 @@ local diagnostics = null_ls.builtins.diagnostics
 
 local code_actions = null_ls.builtins.code_actions
 
+local completion = null_ls.builtins.completion
+
 local sources = {
+  completion.spell,
   formatting.yamlfmt,
   formatting.jq,
   diagnostics.fish,
-  formatting.prettier.with({
-    command = "/opt/homebrew/bin/prettier",
-    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "smarty" },
-    disabled_filetypes = { "lua" },
-  }),
-  -- diagnostics.revive,
+  diagnostics.golangci_lint,
   formatting.golines.with({
     extra_args = {
       "--max-len=180",
-      "--base-formatter=gofumpt",
     },
   })
 }
 
+local gotest = require("go.null_ls").gotest()
+local gotest_codeaction = require("go.null_ls").gotest_action()
 
+table.insert(sources, gotest)
+table.insert(sources, gotest_codeaction)
 
-null_ls.setup({ sources = sources})
+null_ls.setup({ sources = sources })
