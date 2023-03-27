@@ -21,7 +21,6 @@ lsp_installer.on_server_ready(function(server)
           telemetry = { enable = false }
         }
       }
-
     }, opts)
   end
 

@@ -1,1 +1,24 @@
-{"words":["lualine","vlang","bufferline","blankline","nvim","gitsigns","autopairs","treesitter","keymaps","bufnr","noremap","keymap","texthl","numhl","augroup","autocmd","lspconfig"],"language":"en","flagWords":[],"version":"0.2"}
+{
+  "words": [
+    "lualine",
+    "vlang",
+    "bufferline",
+    "blankline",
+    "nvim",
+    "gitsigns",
+    "autopairs",
+    "treesitter",
+    "keymaps",
+    "bufnr",
+    "noremap",
+    "keymap",
+    "texthl",
+    "numhl",
+    "augroup",
+    "autocmd",
+    "lspconfig"
+  ],
+  "language": "en",
+  "flagWords": [],
+  "version": "0.2"
+}

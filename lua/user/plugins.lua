@@ -123,7 +123,8 @@ return packer.startup(function(use)
   }
   use { 'iamcco/markdown-preview.nvim' }
 
-  use {'ollykel/v-vim'}
+  use { 'ollykel/v-vim' }
+  use 'nanotee/sqls.nvim'
 
   --- Code With AI
   use {

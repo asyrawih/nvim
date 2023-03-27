@@ -16,8 +16,10 @@ local sources = {
   completion.spell,
   formatting.yamlfmt,
   formatting.jq,
+  formatting.sql_formatter,
   diagnostics.fish,
   diagnostics.golangci_lint,
+  formatting.fixjson,
   formatting.golines.with({
     extra_args = {
       "--max-len=180",

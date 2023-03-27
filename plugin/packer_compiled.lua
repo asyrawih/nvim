@@ -291,6 +291,11 @@ _G.packer_plugins = {
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["sqls.nvim"] = {
+    loaded = true,
+    path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/sqls.nvim",
+    url = "https://github.com/nanotee/sqls.nvim"
+  },
   ["telescope-dap.nvim"] = {
     loaded = true,
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
