@@ -82,5 +82,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   group = format_sync_grp,
 })
 
+vim.api.nvim_buf_set_option(0, "commentstring", "{/* %s */}")
+
 
 vim.cmd([[au BufNewFile,BufRead *.v set filetype=vlang]])

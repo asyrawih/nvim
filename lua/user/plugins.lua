@@ -54,6 +54,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use 'nvim-lualine/lualine.nvim'
   use { 'iamcco/markdown-preview.nvim' }
+  use { 'numToStr/Comment.nvim' }
 
   --- Golang ---
   use 'ray-x/go.nvim'
@@ -72,8 +73,6 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope-dap.nvim'
   use "jbyuki/venn.nvim"
   use { 'ollykel/v-vim' }
-  -- use 'nanotee/sqls.nvim'
-  use "terrortylor/nvim-comment"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -137,6 +136,7 @@ return packer.startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     'WhoIsSethDaniel/mason-tool-installer.nvim'
   }
+
 
 
   if PACKER_BOOTSTRAP then
