@@ -53,6 +53,7 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use 'nvim-lualine/lualine.nvim'
+  use { 'iamcco/markdown-preview.nvim' }
 
   --- Golang ---
   use 'ray-x/go.nvim'
@@ -70,16 +71,14 @@ return packer.startup(function(use)
   use 'theHamsta/nvim-dap-virtual-text'
   use 'nvim-telescope/telescope-dap.nvim'
   use "jbyuki/venn.nvim"
-
+  use { 'ollykel/v-vim' }
+  -- use 'nanotee/sqls.nvim'
+  use "terrortylor/nvim-comment"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
-  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', } }
-  use({ "catppuccin/nvim" })
-  use({ 'glepnir/zephyr-nvim' })
 
   -- snippets
   use "L3MON4D3/LuaSnip"             --snippet engine
@@ -95,17 +94,30 @@ return packer.startup(function(use)
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', } }
   use 'nkrkv/nvim-treesitter-rescript'
 
-  use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    'WhoIsSethDaniel/mason-tool-installer.nvim'
-  }
 
   use { "glepnir/galaxyline.nvim" }
 
   use { 'akinsho/bufferline.nvim', tag = "v3.*" }
+
+
+  use({ "catppuccin/nvim" })
+  use({ 'glepnir/zephyr-nvim' })
+
+  --- Code With AI
+  use {
+    'Exafunction/codeium.vim',
+    config = function()
+      -- Change '<C-g>' here to any keycode you like.
+      vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+      vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+      vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+      vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+    end
+  }
 
   use {
     'edolphin-ydf/goimpl.nvim',
@@ -119,21 +131,11 @@ return packer.startup(function(use)
       require 'telescope'.load_extension 'goimpl'
     end,
   }
-  use { 'iamcco/markdown-preview.nvim' }
 
-  use { 'ollykel/v-vim' }
-  use 'nanotee/sqls.nvim'
-
-  --- Code With AI
   use {
-    'Exafunction/codeium.vim',
-    config = function()
-      -- Change '<C-g>' here to any keycode you like.
-      vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
-      vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-      vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-      vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-    end
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    'WhoIsSethDaniel/mason-tool-installer.nvim'
   }
 
 
