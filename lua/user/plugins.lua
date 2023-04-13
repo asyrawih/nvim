@@ -76,7 +76,6 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
-  use "tpope/vim-commentary"
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons', } }
   use({ "catppuccin/nvim" })
@@ -107,7 +106,6 @@ return packer.startup(function(use)
   use { "glepnir/galaxyline.nvim" }
 
   use { 'akinsho/bufferline.nvim', tag = "v3.*" }
-  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   use {
     'edolphin-ydf/goimpl.nvim',

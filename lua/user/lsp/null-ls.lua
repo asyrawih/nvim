@@ -22,15 +22,10 @@ local sources = {
   formatting.fixjson,
   formatting.golines.with({
     extra_args = {
-      "--max-len=180",
+      "--max-len=120",
     },
   })
 }
 
-local gotest = require("go.null_ls").gotest()
-local gotest_codeaction = require("go.null_ls").gotest_action()
-
-table.insert(sources, gotest)
-table.insert(sources, gotest_codeaction)
 
 null_ls.setup({ sources = sources })

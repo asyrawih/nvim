@@ -3,6 +3,7 @@ require('go').setup({
   luasnip = true,          -- enable included luasnip snippets. you can also disable while add lua/snips folder to luasnip load
   gofmt = 'gofumpt',       -- gofmt cmd,
   lsp_gofumpt = true,      -- true: set default gofmt in gopls format to gofumpt
+  tag_options = 'json=',   -- sets options sent to gomodifytags, i.e., json=omitempty
   lsp_keymaps = false,     -- set to false to disable gopls/lsp keymap
   lsp_inlay_hints = {
     enable = false,
@@ -41,11 +42,11 @@ require('go').setup({
   lsp_diag_update_in_insert = false,
   lsp_document_formatting = true,
   gopls_remote_auto = false,
-  test_runner = 'richgo', -- one of {`go`, `richgo`, `dlv`, `ginkgo`, `gotestsum`}
-  verbose_tests = true,   -- set to add verbose flag to tests deprecated, see '-v' option
+  test_runner = 'go',    -- one of {`go`, `richgo`, `dlv`, `ginkgo`, `gotestsum`}
+  verbose_tests = true,  -- set to add verbose flag to tests deprecated, see '-v' option
   floaterm = {
-    posititon = 'right',  -- one of {`top`, `bottom`, `left`, `right`, `center`, `auto`}
-    width = 0.45,         -- width of float window if not auto
-    height = 0.98,        -- height of float window if not auto
+    posititon = 'right', -- one of {`top`, `bottom`, `left`, `right`, `center`, `auto`}
+    width = 0.45,        -- width of float window if not auto
+    height = 0.98,       -- height of float window if not auto
   },
 })
