@@ -27,5 +27,8 @@ local sources = {
   })
 }
 
+local gotest_codeaction = require("go.null_ls").gotest_action()
+table.insert(sources, gotest_codeaction)
+
 
 null_ls.setup({ sources = sources })
