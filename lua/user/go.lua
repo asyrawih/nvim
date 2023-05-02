@@ -42,7 +42,7 @@ require('go').setup({
   lsp_diag_update_in_insert = false,
   lsp_document_formatting = true,
   gopls_remote_auto = false,
-  test_runner = 'richgo', -- one of {`go`, `richgo`, `dlv`, `ginkgo`, `gotestsum`}
+  test_runner = 'go', -- one of {`go`, `richgo`, `dlv`, `ginkgo`, `gotestsum`}
   verbose_tests = false,   -- set to add verbose flag to tests deprecated, see '-v' option
   floaterm = {
     posititon = 'right',  -- one of {`top`, `bottom`, `left`, `right`, `center`, `auto`}
