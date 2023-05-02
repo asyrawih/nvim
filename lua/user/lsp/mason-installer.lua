@@ -14,14 +14,6 @@ require("mason-lspconfig").setup_handlers({
       cssls_setting["on_attach"] = opts.on_attach
       cssls_setting["capabilities"] = opts.capabilities
       cssls_setting["filetypes"] = { "css", "less", "scss" }
-      -- cssls_setting["settings"] = {
-      --   css = {
-      --     validate = false,
-      --     lint = {
-      --       unknownAtRules = "ignore"
-      --     }
-      --   }
-      -- }
       require("lspconfig")[server].setup(cssls_setting)
     end
 
@@ -30,6 +22,18 @@ require("mason-lspconfig").setup_handlers({
       sumneko_opts["on_attach"] = opts.on_attach
       sumneko_opts["capabilities"] = opts.capabilities
       require("lspconfig")[server].setup(sumneko_opts)
+    end
+
+    if server == "tsserver" then
+      local tsserver_setting = require("user.lsp.settings.tsserver")
+      tsserver_setting["on_attach"] = opts.on_attach
+      tsserver_setting["capabilities"] = opts.capabilities
+      tsserver_setting["init_options"] = {
+        preferences = {
+          disableSuggestions = true,
+        },
+      }
+      require("lspconfig")[server].setup(tsserver_setting)
     end
   end,
 })
