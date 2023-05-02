@@ -9,19 +9,24 @@ require("mason-lspconfig").setup_handlers({
 
     require("lspconfig")[server].setup(opts)
 
-    if server == "gopls" then
-      require "lspconfig".gopls.setup {
-        settings = {
-          gopls = {
-            gofumpt = true
-          }
-        }
-      }
+    if server == "cssls" then
+      local cssls_setting = require("user.lsp.settings.cssls.cssls")
+      cssls_setting["on_attach"] = opts.on_attach
+      cssls_setting["capabilities"] = opts.capabilities
+      cssls_setting["filetypes"] = { "css", "less", "scss" }
+      -- cssls_setting["settings"] = {
+      --   css = {
+      --     validate = false,
+      --     lint = {
+      --       unknownAtRules = "ignore"
+      --     }
+      --   }
+      -- }
+      require("lspconfig")[server].setup(cssls_setting)
     end
 
     if server == "sumneko_lua" then
       local sumneko_opts = require("user.lsp.settings.sumneko_lua")
-      -- assuming sumneko_opts return a table
       sumneko_opts["on_attach"] = opts.on_attach
       sumneko_opts["capabilities"] = opts.capabilities
       require("lspconfig")[server].setup(sumneko_opts)
