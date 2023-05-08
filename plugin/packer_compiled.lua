@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -124,6 +129,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
+  },
+  ["eyeliner.nvim"] = {
+    loaded = true,
+    path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/eyeliner.nvim",
+    url = "https://github.com/jinh0/eyeliner.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -190,6 +200,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["mini.nvim"] = {
+    loaded = true,
+    path = "/Users/hanan/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
   },
   ["nlsp-settings.nvim"] = {
     loaded = true,

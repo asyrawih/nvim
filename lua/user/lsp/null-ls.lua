@@ -20,6 +20,7 @@ local sources = {
   diagnostics.fish,
   diagnostics.golangci_lint,
   formatting.fixjson,
+  formatting.prismaFmt,
   formatting.golines.with({
     extra_args = {
       "--max-len=120",
