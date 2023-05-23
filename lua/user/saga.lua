@@ -30,9 +30,9 @@ saga.setup({
     outline = {
         win_position = "right",
         win_with = "",
-        win_width = 30,
-        show_detail = true,
-        auto_preview = true,
+        win_width = 60,
+        show_detail = false,
+        auto_preview = false,
         auto_refresh = true,
         auto_close = true,
         custom_sort = nil,

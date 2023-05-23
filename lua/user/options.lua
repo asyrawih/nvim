@@ -83,6 +83,4 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 vim.api.nvim_buf_set_option(0, "commentstring", "{/* %s */}")
-
-
-vim.cmd([[au BufNewFile,BufRead *.v set filetype=vlang]])
+vim.cmd("autocmd FileType go nmap <leader>fm :GoFmt <cr>")
