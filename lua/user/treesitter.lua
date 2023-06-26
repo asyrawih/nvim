@@ -10,7 +10,7 @@ configs.setup {
     enable = true,
     filetypes = filetypes
   },
-  ensure_installed = "all",
+  ensure_installed = "go",
   sync_install = false,
   ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
   autopairs = {

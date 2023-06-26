@@ -137,10 +137,10 @@ return packer.startup(function(use)
     'WhoIsSethDaniel/mason-tool-installer.nvim'
   }
 
-  use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
   use { 'echasnovski/mini.nvim', branch = 'stable' }
   use 'jinh0/eyeliner.nvim'
-
+  use { 'edluffy/hologram.nvim' }
+  use {"xiyaowong/transparent.nvim"}
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
