@@ -139,8 +139,9 @@ return packer.startup(function(use)
 
   use { 'echasnovski/mini.nvim', branch = 'stable' }
   use 'jinh0/eyeliner.nvim'
-  use { 'edluffy/hologram.nvim' }
-  use {"xiyaowong/transparent.nvim"}
+  use { "xiyaowong/transparent.nvim" }
+
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

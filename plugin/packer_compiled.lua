@@ -161,11 +161,6 @@ _G.packer_plugins = {
     path = "/home/hanan/.local/share/nvim/site/pack/packer/start/guihua.lua",
     url = "https://github.com/ray-x/guihua.lua"
   },
-  ["hologram.nvim"] = {
-    loaded = true,
-    path = "/home/hanan/.local/share/nvim/site/pack/packer/start/hologram.nvim",
-    url = "https://github.com/edluffy/hologram.nvim"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/hanan/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",

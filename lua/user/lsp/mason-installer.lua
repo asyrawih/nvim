@@ -35,5 +35,18 @@ require("mason-lspconfig").setup_handlers({
       }
       require("lspconfig")[server].setup(tsserver_setting)
     end
+    if server == "elixirls" then
+      require("lspconfig")[server].setup({
+        on_attach = opts.on_attach,
+        capabilities = opts.capabilities,
+        flags = {
+          debounce_text_changes = 150,
+        },
+        elixirLS = {
+          dialyzerEnabled = false,
+          fetchDeps = false,
+        },
+      })
+    end
   end,
 })
