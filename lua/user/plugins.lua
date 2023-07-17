@@ -141,6 +141,17 @@ return packer.startup(function(use)
   use 'jinh0/eyeliner.nvim'
   use { "xiyaowong/transparent.nvim" }
 
+use({
+  "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup()
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+})
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
