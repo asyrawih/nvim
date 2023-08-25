@@ -17,6 +17,13 @@ require("mason-lspconfig").setup_handlers({
       require("lspconfig")[server].setup(cssls_setting)
     end
 
+    if server == "intelephense" then
+      local php = require("user.lsp.settings.php")
+      php["on_attach"] = opts.on_attach
+      php["capabilities"] = opts.capabilities
+      require("lspconfig")[server].setup(php)
+    end
+
     if server == "sumneko_lua" then
       local sumneko_opts = require("user.lsp.settings.sumneko_lua")
       sumneko_opts["on_attach"] = opts.on_attach
