@@ -1,4 +1,3 @@
-
 require 'nvim-tree'.setup {
   disable_netrw       = true,
   hijack_netrw        = true,
@@ -25,12 +24,7 @@ require 'nvim-tree'.setup {
   },
   view                = {
     width = 40,
-    hide_root_folder = false,
     side = 'left',
-    mappings = {
-      custom_only = false,
-      list = {}
-    },
     number = false,
     relativenumber = false,
     signcolumn = "yes"
@@ -45,7 +39,7 @@ require 'nvim-tree'.setup {
     ignore_list = { '.git', 'node_modules', '.cache' }
   },
 
-  renderer = {
+  renderer            = {
     icons = {
       glyphs = {
         git = {

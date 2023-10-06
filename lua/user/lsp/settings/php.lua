@@ -4,6 +4,9 @@ return {
       diagnostics = {
         undefinedProperties = false,
         undefinedVariables = false
+      },
+      format = {
+        enable = false
       }
     }
   }

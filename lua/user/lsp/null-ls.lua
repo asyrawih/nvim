@@ -16,6 +16,7 @@ local sources = {
   formatting.yamlfmt,
   formatting.jq,
   formatting.sql_formatter,
+  formatting.gofmt,
   diagnostics.fish,
   diagnostics.golangci_lint,
   formatting.fixjson
