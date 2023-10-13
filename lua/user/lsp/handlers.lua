@@ -79,6 +79,15 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 require('go').setup({
   lsp_cfg = {
     capabilities = capabilities,
+    settings = {
+      gopls = {
+       staticcheck = true,
+       analyses = {
+        ST1000 = false,
+        ST1003 = false
+       }
+      }
+    }
   },
 })
 

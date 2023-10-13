@@ -16,14 +16,6 @@ local sources = {
   formatting.yamlfmt,
   formatting.jq,
   formatting.sql_formatter,
-  formatting.gofmt,
   diagnostics.fish,
-  diagnostics.golangci_lint,
   formatting.fixjson
 }
-
-local gotest_codeaction = require("go.null_ls").gotest_action()
-table.insert(sources, gotest_codeaction)
-
-
-null_ls.setup({ sources = sources })
