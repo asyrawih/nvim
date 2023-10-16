@@ -38,7 +38,7 @@ vim.opt.sidescrolloff = 8
 
 vim.opt.expandtab = true
 vim.opt.shortmess:append "c"
-vim.opt.guifont = "FiraCode Nerd Font:h11:b"
+vim.opt.guifont = "FiraCode Nerd Font:h13:b"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]

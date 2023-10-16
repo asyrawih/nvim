@@ -75,22 +75,6 @@ M.on_attach = function(client, bufnr)
   lsp_highlight_document(client)
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-require('go').setup({
-  lsp_cfg = {
-    capabilities = capabilities,
-    settings = {
-      gopls = {
-       staticcheck = true,
-       analyses = {
-        ST1000 = false,
-        ST1003 = false
-       }
-      }
-    }
-  },
-})
-
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_ok then
   return
