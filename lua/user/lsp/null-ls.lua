@@ -19,3 +19,5 @@ local sources = {
   diagnostics.fish,
   formatting.fixjson
 }
+
+null_ls.setup({ sources = sources })
