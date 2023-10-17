@@ -1,7 +1,7 @@
 return {
   settings = {
     gopls = {
-     staticcheck = true,
+     staticcheck = false,
     }
   }
 }

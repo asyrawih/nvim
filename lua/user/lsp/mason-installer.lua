@@ -42,6 +42,9 @@ require("mason-lspconfig").setup_handlers({
       }
       require("lspconfig")[server].setup(tsserver_setting)
     end
+    if server == "gopls" then
+      print(server)
+    end
     if server == "elixirls" then
       require("lspconfig")[server].setup({
         on_attach = opts.on_attach,
