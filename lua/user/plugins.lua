@@ -90,7 +90,7 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use({ "glepnir/lspsaga.nvim", branch = "main", })
 
-use 'nvim-tree/nvim-web-devicons'
+  use 'nvim-tree/nvim-web-devicons'
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
@@ -137,12 +137,11 @@ use 'nvim-tree/nvim-web-devicons'
     'WhoIsSethDaniel/mason-tool-installer.nvim'
   }
 
-  use { 'echasnovski/mini.nvim', branch = 'stable' }
   use 'jinh0/eyeliner.nvim'
   use { "xiyaowong/transparent.nvim" }
 
-use({
-  "jackMort/ChatGPT.nvim",
+  use({
+    "jackMort/ChatGPT.nvim",
     config = function()
       require("chatgpt").setup()
     end,
@@ -151,7 +150,21 @@ use({
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim"
     }
-})
+  })
+
+  use {
+    'VonHeikemen/searchbox.nvim',
+    requires = {
+      { 'MunifTanjim/nui.nvim' }
+    }
+  }
+
+  use {
+    'VonHeikemen/fine-cmdline.nvim',
+    requires = {
+      { 'MunifTanjim/nui.nvim' }
+    }
+  }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
