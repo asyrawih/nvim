@@ -93,7 +93,9 @@ keymap("n", "<leader>gt", ":GoTestFunc -v -n 1 -F<cr>", opts)
 keymap("n", "<leader>vs", ":vsplit<cr>", opts)
 keymap("n", "<leader>sh", ":split<cr>", opts)
 keymap("n", "<leader>go", ":GoPkgOutline<cr>", opts)
+-- Search Box
 keymap("x" ,"/", ":SearchBoxIncSearch visual_mode=true <CR>", opts)
 keymap("n" ,"/", ":SearchBoxIncSearch<CR>", opts)
-
--- vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })
+-- FineCmdline
+keymap('n', '<leader>p', '<cmd>FineCmdline<CR>', { noremap = true })
+keymap('x', '<leader>p', "<cmd>FineCmdline '<,'><CR>", { noremap = true })
