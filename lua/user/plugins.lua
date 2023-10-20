@@ -88,7 +88,7 @@ return packer.startup(function(use)
   -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim"    -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use({ "glepnir/lspsaga.nvim", branch = "main", })
+  use({ "nvimdev/lspsaga.nvim", branch = "main", })
 
   use 'nvim-tree/nvim-web-devicons'
   -- Treesitter
@@ -163,6 +163,17 @@ return packer.startup(function(use)
     'VonHeikemen/fine-cmdline.nvim',
     requires = {
       { 'MunifTanjim/nui.nvim' }
+    }
+  }
+
+  use {
+    "kristijanhusak/vim-dadbod-ui",
+    requires = {
+      { 'tpope/vim-dadbod' },
+      { 'kristijanhusak/vim-dadbod-completion' },
+      config = function()
+        vim.g.db_ui_use_nerd_fonts = 1
+      end
     }
   }
 

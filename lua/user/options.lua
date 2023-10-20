@@ -36,12 +36,14 @@ vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
 -- vim.opt.foldmethod = "indent"                   -- fold by indentation
 
+
 vim.opt.expandtab = true
 vim.opt.shortmess:append "c"
 vim.opt.guifont = "FiraCode Nerd Font:h13:b"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
+vim.cmd "set noea"
 
 -- Delete Something Without Copy
 -- vim.keymap.set({'n', 'x'}, 'x', '"_x')

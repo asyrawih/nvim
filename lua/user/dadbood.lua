@@ -1,0 +1,26 @@
+vim.g.db_ui_icons = {
+  expanded = {
+    db            = "▾ ",
+    buffers       = '▾ ',
+    saved_queries = '▾ ',
+    schemas       = '▾ ',
+    schema        = '▾ פּ',
+    tables        = '▾ 藺',
+    table         = '▾ ',
+  },
+  collapsed = {
+    db = "▸ ",
+    buffers = "▸ '",
+    saved_queries = "▸ ",
+    schemas = "▸ '",
+    schema = "▸ פּ'",
+    tables = "▸ 藺'",
+    table = "▸ '",
+  },
+  saved_query = "'",
+  new_query = "璘',",
+  tables = "",
+  buffers = "﬘",
+  connection_ok = "✓",
+  connection_error = "✕",
+}
