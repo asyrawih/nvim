@@ -68,12 +68,12 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope --
 keymap("n", "<leader>ff",
-    "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_ivy({ winbland = 10 }))<cr>", opts)
+  "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_ivy({ winbland = 10 }))<cr>", opts)
 keymap("n", "<leader>tt", "<cmd>lua require'telescope.builtin'.live_grep(require('telescope.themes').get_ivy({ }))<cr>",
-    opts)
+  opts)
 
 vim.api.nvim_set_keymap('n', '<leader>im', [[<cmd>lua require'telescope'.extensions.goimpl.goimpl{}<CR>]],
-    { noremap = true, silent = true })
+  { noremap = true, silent = true })
 
 
 keymap("n", "<leader>df", ":DiffviewOpen<cr>", opts)
@@ -95,10 +95,9 @@ keymap("n", "<leader>dt", ":DBUIToggle<cr>", opts)
 -- Window --
 keymap("n", "<leader>vs", ":vsplit<cr>", opts)
 keymap("n", "<leader>sh", ":split<cr>", opts)
-keymap("n", "<leader>go", ":GoPkgOutline<cr>", opts)
 -- Search Box
-keymap("x" ,"/", ":SearchBoxIncSearch visual_mode=true <CR>", opts)
-keymap("n" ,"/", ":SearchBoxIncSearch<CR>", opts)
+keymap("x", "/", ":SearchBoxIncSearch visual_mode=true <CR>", opts)
+keymap("n", "/", ":SearchBoxIncSearch<CR>", opts)
 -- FineCmdline
 keymap('n', '<leader>p', '<cmd>FineCmdline<CR>', { noremap = true })
 keymap('x', '<leader>p', "<cmd>FineCmdline '<,'><CR>", { noremap = true })

@@ -44,6 +44,13 @@ vim.opt.guifont = "FiraCode Nerd Font:h13:b"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd "set noea"
+vim.g.completion_chain_complete_list = {
+  sql = {
+    {
+      complete_items = { 'vim-dadbod-completion' }
+    }
+  }
+}
 
 -- Delete Something Without Copy
 -- vim.keymap.set({'n', 'x'}, 'x', '"_x')
@@ -66,10 +73,13 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
 vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
   pattern = '*.go',
   callback = function()
+    -- Shorten function name
+    local keymap = vim.api.nvim_set_keymap
     vim.api.nvim_command("setlocal shiftwidth=4")
     vim.api.nvim_command("setlocal tabstop=4")
     vim.api.nvim_command("setlocal cmdheight=4")
     vim.api.nvim_command("setlocal numberwidth=4")
+    keymap("n", "<leader>fm", ":GoFmt<cr>", { silent = true })
   end,
   group = group
 })
@@ -85,4 +95,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 vim.api.nvim_buf_set_option(0, "commentstring", "{/* %s */}")
-vim.cmd("autocmd FileType go nmap <leader>fm :GoFmt <cr>")

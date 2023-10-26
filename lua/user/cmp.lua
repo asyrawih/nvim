@@ -115,7 +115,7 @@ cmp.setup {
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "buffer" },
-    { name = "path" },
+    { name = "path" }
   },
   window = {
     completion = cmp.config.window.bordered(),
@@ -134,3 +134,12 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
+
+cmp.setup.buffer({
+  sources = {
+    { name = 'vim-dadbod-completion' }
+  },
+  filetypes = { 'sql', 'mysql', 'plsql' }
+})
+
+
