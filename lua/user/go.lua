@@ -2,9 +2,9 @@ require('go').setup({
   disable_defaults = false, -- true|false when true set false to all boolean settings and replace all table
   -- settings with {}
   go = 'go', -- go command, can be go[default] or go1.18beta1
-  goimport = 'gopls', -- goimport command, can be gopls[default] or goimport
+  goimport = 'goimports', -- goimport command, can be gopls[default] or goimport
   fillstruct = 'gopls', -- can be nil (use fillstruct, slower) and gopls
-  gofmt = 'gofumpt', --gofmt cmd,
+  gofmt = 'gofmt', --gofmt cmd,
   max_line_len = 128, -- max line length in golines format, Target maximum line length for golines
   tag_transform = false, -- can be transform option("snakecase", "camelcase", etc) check gomodifytags for details and more options
   tag_options = 'json=omitempty', -- sets options sent to gomodifytags, i.e., json=omitempty
@@ -21,7 +21,8 @@ require('go').setup({
         staticcheck = true,
         analyses = {
           ST1000 = false,
-          ST1003 = false
+          ST1003 = false,
+          useany = false
         }
       }
     }
@@ -29,7 +30,7 @@ require('go').setup({
   -- false: do nothing
   -- if lsp_cfg is a table, merge table with with non-default gopls setup in go/lsp.lua, e.g.
   --   lsp_cfg = {settings={gopls={matcher='CaseInsensitive', ['local'] = 'your_local_module_path', gofumpt = true }}}
-  lsp_gofumpt = true,  -- true: set default gofmt in gopls format to gofumpt
+  lsp_gofumpt = false,  -- true: set default gofmt in gopls format to gofumpt
   lsp_on_attach = nil, -- nil: use on_attach function defined in go/lsp.lua,
   --      when lsp_cfg is true
   -- if lsp_on_attach is a function: use this function as on_attach function for gopls
@@ -93,7 +94,7 @@ require('go').setup({
   dap_port = 38697,                                              -- can be set to a number, if set to -1 go.nvim will pickup a random port
   dap_timeout = 15,                                              --  see dap option initialize_timeout_sec = 15,
   dap_retries = 20,                                              -- see dap option max_retries
-  build_tags = "tag1,tag2",                                      -- set default build tags
+  build_tags = "",                                      -- set default build tags
   textobjects = true,                                            -- enable default text jobects through treesittter-text-objects
   test_runner = 'go',                                            -- one of {`go`, `richgo`, `dlv`, `ginkgo`, `gotestsum`}
   verbose_tests = true,                                          -- set to add verbose flag to tests deprecated, see '-v' option

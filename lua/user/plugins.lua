@@ -177,6 +177,9 @@ return packer.startup(function(use)
     }
   }
 
+  use {'rcarriga/nvim-notify'}
+
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

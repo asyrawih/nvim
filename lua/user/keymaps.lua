@@ -87,7 +87,10 @@ keymap("n", "ss", ":noh<cr>", opts)
 keymap("n", "<S-w>", ":Bdelete<cr>", opts)
 
 --- Golang ---
-keymap("n", "<leader>gt", ":GoTestFunc -v -n 1 -F<cr>", opts)
+keymap("n", "<leader>gt", ":GoTestFunc -n 1 -F<cr>", opts)
+
+--dadbood
+keymap("n", "<leader>dt", ":DBUIToggle<cr>", opts)
 
 -- Window --
 keymap("n", "<leader>vs", ":vsplit<cr>", opts)
