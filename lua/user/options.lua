@@ -84,6 +84,13 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
   group = group
 })
 
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+  pattern = {"*.tf", "*.tfvars"},
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
+
 
 local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
 vim.api.nvim_create_autocmd("BufWritePre", {

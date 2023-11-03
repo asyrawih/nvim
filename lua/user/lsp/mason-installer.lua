@@ -9,6 +9,13 @@ require("mason-lspconfig").setup_handlers({
 
     require("lspconfig")[server].setup(opts)
 
+    if server == "terraformls" then
+      local tera = require("user.lsp.settings.terraform")
+      tera["on_attach"] = opts.on_attach
+      tera["capabilities"] = opts.capabilities
+      require("lspconfig")[server].setup(tera)
+    end
+
     if server == "cssls" then
       local cssls_setting = require("user.lsp.settings.cssls.cssls")
       cssls_setting["on_attach"] = opts.on_attach

@@ -17,12 +17,15 @@ require('go').setup({
   lsp_cfg = {
     settings = {
       gopls = {
-        matcher = 'CaseInsensitive',
         staticcheck = true,
         analyses = {
           ST1000 = false,
           ST1003 = false,
           useany = false
+        },
+        codelenses = {
+          generate = false,
+          gc_details = false
         }
       }
     }
@@ -30,28 +33,28 @@ require('go').setup({
   -- false: do nothing
   -- if lsp_cfg is a table, merge table with with non-default gopls setup in go/lsp.lua, e.g.
   --   lsp_cfg = {settings={gopls={matcher='CaseInsensitive', ['local'] = 'your_local_module_path', gofumpt = true }}}
-  lsp_gofumpt = false,  -- true: set default gofmt in gopls format to gofumpt
+  lsp_gofumpt = false, -- true: set default gofmt in gopls format to gofumpt
   lsp_on_attach = nil,
   --      when lsp_cfg is true
   -- if lsp_on_attach is a function: use this function as on_attach function for gopls
-  lsp_keymaps = false, -- set to false to disable gopls/lsp keymap
-  lsp_codelens = true, -- set to false to disable codelens, true by default, you can use a function
+  lsp_keymaps = false,  -- set to false to disable gopls/lsp keymap
+  lsp_codelens = false, -- set to false to disable codelens, true by default, you can use a function
   -- function(bufnr)
   --    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>F", "<cmd>lua vim.lsp.buf.formatting()<CR>", {noremap=true, silent=true})
   -- end
   -- to setup a table of codelens
-  diagnostic = {  -- set diagnostic to false to disable vim.diagnostic setup
-    hdlr = false, -- hook lsp diag handler and send diag to quickfix
+  diagnostic = { -- set diagnostic to false to disable vim.diagnostic setup
+    hdlr = true, -- hook lsp diag handler and send diag to quickfix
     underline = true,
     -- virtual text setup
     virtual_text = { space = 0, prefix = '■' },
     signs = true,
     update_in_insert = false,
   },
-  lsp_document_formatting = true,
-  gopls_cmd = nil,          -- if you need to specify gopls path and cmd, e.g {"/home/user/lsp/gopls", "-logfile","/var/log/gopls.log" }
+  lsp_document_formatting = false,
+  gopls_cmd = { "/Users/hanan/go/bin/gopls","-mode", "stdio" },
 
-  gopls_remote_auto = false, -- add -remote=auto to gopls
+  gopls_remote_auto = true, -- add -remote=auto to gopls
   gocoverage_sign = "█",
   sign_priority = 5,        -- change to a higher number to override other signs
   dap_debug = true,         -- set to false to disable dap
@@ -69,13 +72,13 @@ require('go').setup({
   test_runner = 'go',                                            -- one of {`go`, `richgo`, `dlv`, `ginkgo`, `gotestsum`}
   verbose_tests = true,                                          -- set to add verbose flag to tests deprecated, see '-v' option
   run_in_floaterm = false,                                       -- set to true to run in float window. :GoTermClose closes the floatterm
-  floaterm = {                                                                 -- position
-    posititon = 'auto',                                                        -- one of {`top`, `bottom`, `left`, `right`, `center`, `auto`}
-    width = 0.45,                                                              -- width of float window if not auto
-    height = 0.98,                                                             -- height of float window if not auto
+  floaterm = {                                                   -- position
+    posititon = 'auto',                                          -- one of {`top`, `bottom`, `left`, `right`, `center`, `auto`}
+    width = 0.45,                                                -- width of float window if not auto
+    height = 0.98,                                               -- height of float window if not auto
   },
-  trouble = false,                                                             -- true: use trouble to open quickfix
-  test_efm = false,                                                            -- errorfomat for quickfix, default mix mode, set to true will be efm only
-  luasnip = true,                                                              -- enable included luasnip snippets. you can also disable while add lua/snips folder to luasnip load
-  iferr_vertical_shift = 4                                                     -- defines where the cursor will end up vertically from the begining of if err statement
+  trouble = false,                                               -- true: use trouble to open quickfix
+  test_efm = false,                                              -- errorfomat for quickfix, default mix mode, set to true will be efm only
+  luasnip = true,                                                -- enable included luasnip snippets. you can also disable while add lua/snips folder to luasnip load
+  iferr_vertical_shift = 4                                       -- defines where the cursor will end up vertically from the begining of if err statement
 })
