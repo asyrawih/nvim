@@ -56,10 +56,6 @@ return packer.startup(function(use)
   use { 'iamcco/markdown-preview.nvim' }
   use { 'numToStr/Comment.nvim' }
 
-  --- Golang ---
-  use 'ray-x/go.nvim'
-  use 'ray-x/guihua.lua'
-
   -- CMP --
   use "hrsh7th/nvim-cmp"         -- The completion plugin
   use "hrsh7th/cmp-buffer"       -- buffer completions
@@ -73,6 +69,11 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope-dap.nvim'
   use "jbyuki/venn.nvim"
   use { 'ollykel/v-vim' }
+
+  --- Golang ---
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua'
+
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
