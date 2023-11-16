@@ -98,6 +98,11 @@ keymap("n", "<leader>sh", ":split<cr>", opts)
 -- Search Box
 keymap("x", "/", ":SearchBoxIncSearch visual_mode=true <CR>", opts)
 keymap("n", "/", ":SearchBoxIncSearch<CR>", opts)
+
+-- neogit
+keymap("n", "<leader>g", ":Neogit<CR>", opts)
+
+
 -- FineCmdline
 keymap('n', '<leader>p', '<cmd>FineCmdline<CR>', { noremap = true })
 keymap('x', '<leader>p', "<cmd>FineCmdline '<,'><CR>", { noremap = true })

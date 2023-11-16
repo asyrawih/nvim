@@ -179,6 +179,7 @@ return packer.startup(function(use)
   }
 
   use {'rcarriga/nvim-notify'}
+  use {'NeogitOrg/neogit', config=true}
 
 
   if PACKER_BOOTSTRAP then
