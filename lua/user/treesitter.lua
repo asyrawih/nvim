@@ -5,6 +5,8 @@ require('nvim-ts-autotag').setup({
   filetypes = filetypes,
 })
 
+vim.g.skip_ts_context_commentstring_module = true
+
 configs.setup {
   autotag = {
     enable = true,
@@ -22,8 +24,4 @@ configs.setup {
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true, disable = { "yaml" } },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  },
 }

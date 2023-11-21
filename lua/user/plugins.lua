@@ -178,8 +178,10 @@ return packer.startup(function(use)
     }
   }
 
-  use {'rcarriga/nvim-notify'}
-  use {'NeogitOrg/neogit', config=true}
+  use { 'rcarriga/nvim-notify' }
+  use { 'NeogitOrg/neogit', config = true }
+
+  use { 'akinsho/git-conflict.nvim' }
 
 
   if PACKER_BOOTSTRAP then
