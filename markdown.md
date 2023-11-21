@@ -1,3 +1,3 @@
-# tidak paham 
+# paham 
 
 some thing happen in here achievement
