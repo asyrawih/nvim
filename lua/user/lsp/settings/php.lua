@@ -3,7 +3,8 @@ return {
     intelephense = {
       diagnostics = {
         undefinedProperties = false,
-        undefinedVariables = false
+        undefinedVariables = false,
+        undefinedTypes = false
       },
       format = {
         enable = false
